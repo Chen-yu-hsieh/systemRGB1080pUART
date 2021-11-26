@@ -1,0 +1,289 @@
+18:51:50 INFO  : Launching XSDB server: xsdb.bat -interactive C:\Users\USER\Desktop\System1080p\System1080p.sdk\temp_xsdb_launch_script.tcl
+18:51:56 INFO  : XSDB server has started successfully.
+18:52:03 INFO  : Processing command line option -hwspec C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper.hdf.
+19:04:23 INFO  : Launching XSDB server: xsdb.bat -interactive C:\Users\USER\Desktop\System1080p\System1080p.sdk\temp_xsdb_launch_script.tcl
+19:04:25 INFO  : XSDB server has started successfully.
+01:37:06 INFO  : Launching XSDB server: xsdb.bat -interactive C:\Users\USER\Desktop\System1080p\System1080p.sdk\temp_xsdb_launch_script.tcl
+01:37:12 INFO  : XSDB server has started successfully.
+01:37:15 INFO  : Processing command line option -hwspec C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper.hdf.
+01:37:27 INFO  : Checking for hwspec changes in the project System1080p_wrapper_hw_platform_0.
+01:58:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248445883" && level==0} -index 1' command is executed.
+01:58:02 INFO  : 'fpga -state' command is executed.
+01:58:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:58:03 INFO  : Sourcing of 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:58:03 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0' command is executed.
+01:58:03 INFO  : Hardware design information is loaded from 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/system.hdf'.
+01:58:03 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0' command is executed.
+01:58:04 INFO  : 'stop' command is executed.
+01:58:05 INFO  : 'ps7_init' command is executed.
+01:58:05 INFO  : 'ps7_post_config' command is executed.
+01:58:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:58:05 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:58:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:58:17 INFO  : The application 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/imageIP/Debug/imageIP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:58:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+loadhw C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+dow C:/Users/USER/Desktop/System1080p/System1080p.sdk/imageIP/Debug/imageIP.elf
+----------------End of Script----------------
+
+01:58:17 INFO  : Memory regions updated for context APU
+01:58:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:58:17 INFO  : 'con' command is executed.
+01:58:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+con
+----------------End of Script----------------
+
+01:59:09 INFO  : Disconnected from the channel tcfchan#1.
+01:59:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248445883" && level==0} -index 1' command is executed.
+01:59:10 INFO  : 'fpga -state' command is executed.
+01:59:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:59:10 INFO  : Sourcing of 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:59:10 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0' command is executed.
+01:59:15 INFO  : Hardware design information is loaded from 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/system.hdf'.
+01:59:15 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0' command is executed.
+01:59:16 INFO  : 'stop' command is executed.
+01:59:18 INFO  : 'ps7_init' command is executed.
+01:59:18 INFO  : 'ps7_post_config' command is executed.
+01:59:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:59:19 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:59:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:59:21 ERROR : AP transaction timeout
+01:59:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+loadhw C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+dow C:/Users/USER/Desktop/System1080p/System1080p.sdk/imageIP/Debug/imageIP.elf
+----------------End of Script----------------
+
+02:00:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248445883" && level==0} -index 1' command is executed.
+02:00:07 INFO  : 'fpga -state' command is executed.
+02:00:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:00:07 INFO  : Sourcing of 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:00:07 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0' command is executed.
+02:00:07 INFO  : Hardware design information is loaded from 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/system.hdf'.
+02:00:08 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0' command is executed.
+02:00:08 INFO  : 'stop' command is executed.
+02:00:08 INFO  : 'ps7_init' command is executed.
+02:00:09 INFO  : 'ps7_post_config' command is executed.
+02:00:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:00:09 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:00:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:00:21 INFO  : The application 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/imageIP/Debug/imageIP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:00:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+loadhw C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+dow C:/Users/USER/Desktop/System1080p/System1080p.sdk/imageIP/Debug/imageIP.elf
+----------------End of Script----------------
+
+02:00:21 INFO  : Memory regions updated for context APU
+02:00:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:00:21 INFO  : 'con' command is executed.
+02:00:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+con
+----------------End of Script----------------
+
+02:00:57 INFO  : Disconnected from the channel tcfchan#2.
+02:00:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248445883" && level==0} -index 1' command is executed.
+02:00:58 INFO  : 'fpga -state' command is executed.
+02:00:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:00:58 INFO  : Sourcing of 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:00:59 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0' command is executed.
+02:01:03 INFO  : Hardware design information is loaded from 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/system.hdf'.
+02:01:03 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0' command is executed.
+02:01:03 INFO  : 'stop' command is executed.
+02:01:04 INFO  : 'ps7_init' command is executed.
+02:01:04 INFO  : 'ps7_post_config' command is executed.
+02:01:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:01:04 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:01:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:01:15 INFO  : The application 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/imageIP/Debug/imageIP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:01:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+loadhw C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+dow C:/Users/USER/Desktop/System1080p/System1080p.sdk/imageIP/Debug/imageIP.elf
+----------------End of Script----------------
+
+02:01:16 INFO  : Memory regions updated for context APU
+02:01:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:01:16 INFO  : 'con' command is executed.
+02:01:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+con
+----------------End of Script----------------
+
+02:23:57 INFO  : Launching XSDB server: xsdb.bat -interactive C:\Users\USER\Desktop\System1080p\System1080p.sdk\temp_xsdb_launch_script.tcl
+02:23:59 INFO  : XSDB server has started successfully.
+02:24:00 INFO  : Processing command line option -hwspec C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper.hdf.
+02:24:00 INFO  : Checking for hwspec changes in the project System1080p_wrapper_hw_platform_0.
+03:46:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248445883" && level==0} -index 1' command is executed.
+03:46:32 INFO  : 'fpga -state' command is executed.
+03:46:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:46:33 INFO  : Sourcing of 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/ps7_init.tcl' is done.
+03:46:33 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0' command is executed.
+03:46:33 INFO  : Hardware design information is loaded from 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/system.hdf'.
+03:46:34 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0' command is executed.
+03:46:34 INFO  : 'stop' command is executed.
+03:46:40 INFO  : 'ps7_init' command is executed.
+03:46:40 INFO  : 'ps7_post_config' command is executed.
+03:46:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:46:41 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+03:46:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:46:44 ERROR : AP transaction timeout
+03:46:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+loadhw C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+dow C:/Users/USER/Desktop/System1080p/System1080p.sdk/imageIP/Debug/imageIP.elf
+----------------End of Script----------------
+
+03:47:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248445883" && level==0} -index 1' command is executed.
+03:47:20 INFO  : 'fpga -state' command is executed.
+03:47:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:47:20 INFO  : Sourcing of 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/ps7_init.tcl' is done.
+03:47:20 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0' command is executed.
+03:47:21 INFO  : Hardware design information is loaded from 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/system.hdf'.
+03:47:21 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0' command is executed.
+03:47:21 INFO  : 'stop' command is executed.
+03:47:22 INFO  : 'ps7_init' command is executed.
+03:47:22 INFO  : 'ps7_post_config' command is executed.
+03:47:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:47:22 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+03:47:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:47:24 INFO  : The application 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/imageIP/Debug/imageIP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+03:47:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+loadhw C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+dow C:/Users/USER/Desktop/System1080p/System1080p.sdk/imageIP/Debug/imageIP.elf
+----------------End of Script----------------
+
+03:47:24 INFO  : Memory regions updated for context APU
+03:47:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:47:25 INFO  : 'con' command is executed.
+03:47:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+con
+----------------End of Script----------------
+
+03:56:31 INFO  : Disconnected from the channel tcfchan#1.
+03:56:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248445883" && level==0} -index 1' command is executed.
+03:56:32 INFO  : 'fpga -state' command is executed.
+03:56:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:56:32 INFO  : Sourcing of 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/ps7_init.tcl' is done.
+03:56:32 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0' command is executed.
+03:56:37 INFO  : Hardware design information is loaded from 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/system.hdf'.
+03:56:38 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0' command is executed.
+03:56:38 INFO  : 'stop' command is executed.
+03:56:41 INFO  : 'ps7_init' command is executed.
+03:56:41 INFO  : 'ps7_post_config' command is executed.
+03:56:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:56:42 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+03:56:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:56:44 ERROR : AP transaction timeout
+03:56:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+loadhw C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+dow C:/Users/USER/Desktop/System1080p/System1080p.sdk/imageIP/Debug/imageIP.elf
+----------------End of Script----------------
+
+03:57:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248445883" && level==0} -index 1' command is executed.
+03:57:06 INFO  : 'fpga -state' command is executed.
+03:57:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:57:07 INFO  : Sourcing of 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/ps7_init.tcl' is done.
+03:57:07 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0' command is executed.
+03:57:07 INFO  : Hardware design information is loaded from 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/system.hdf'.
+03:57:08 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0' command is executed.
+03:57:08 INFO  : 'stop' command is executed.
+03:57:08 INFO  : 'ps7_init' command is executed.
+03:57:08 INFO  : 'ps7_post_config' command is executed.
+03:57:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:57:09 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+03:57:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:57:11 INFO  : The application 'C:/Users/USER/Desktop/System1080p/System1080p.sdk/imageIP/Debug/imageIP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+03:57:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+loadhw C:/Users/USER/Desktop/System1080p/System1080p.sdk/System1080p_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+dow C:/Users/USER/Desktop/System1080p/System1080p.sdk/imageIP/Debug/imageIP.elf
+----------------End of Script----------------
+
+03:57:11 INFO  : Memory regions updated for context APU
+03:57:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:57:11 INFO  : 'con' command is executed.
+03:57:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248445883"} -index 0
+con
+----------------End of Script----------------
+
+12:49:07 INFO  : Launching XSDB server: xsdb.bat -interactive C:\Users\USER\Desktop\System1080p\System1080p.sdk\temp_xsdb_launch_script.tcl
